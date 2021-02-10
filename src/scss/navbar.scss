@@ -1,0 +1,97 @@
+$duration: 300ms;
+$navbarHeight: 64px;
+
+.navbar {
+  font-size: large;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100vw;
+}
+.nav-link {
+  color: white;
+}
+.transparentNav {
+  background-color: rgba(255, 255, 255, 0);
+  height: 119px;
+
+  -webkit-transition: background-color $duration linear;
+  -ms-transition: background-color $duration linear;
+  transition: background-color $duration linear;
+
+  -webkit-transition: height $duration linear;
+  -ms-transition: height $duration linear;
+  transition: height $duration linear;
+}
+.transparentNav-mobile {
+  background-color: rgba(255, 255, 255, 0);
+  height: $navbarHeight;
+
+  -webkit-transition: background-color $duration linear;
+  -ms-transition: background-color $duration linear;
+  transition: background-color $duration linear;
+
+  -webkit-transition: height $duration linear;
+  -ms-transition: height $duration linear;
+  transition: height $duration linear;
+}
+.darkNav {
+  background-color: $secondary !important;
+  height: $navbarHeight;
+  -webkit-transition: background-color $duration linear;
+  -ms-transition: background-color $duration linear;
+  transition: background-color $duration linear;
+
+  -webkit-transition: height $duration linear;
+  -ms-transition: height $duration linear;
+  transition: height $duration linear;
+}
+#navbarSupportedContent {
+  background-color: white;
+}
+
+.logoHuge {
+  height: 110px;
+  -webkit-animation: spin 100s linear infinite;
+  -moz-animation: spin 100s linear infinite;
+  animation: spin 100s linear infinite;
+
+  -webkit-transition: height $duration linear;
+  -ms-transition: height $duration linear;
+  transition: height $duration linear;
+}
+.logoSmall {
+  height: 46px;
+  -webkit-animation: spin 100s linear infinite;
+  -moz-animation: spin 100s linear infinite;
+  animation: spin 100s linear infinite;
+
+  -webkit-transition: height $duration linear;
+  -ms-transition: height $duration linear;
+  transition: height $duration linear;
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+#footer {
+  height: 25px;
+  width: 100vw;
+  font-size: small;
+}
+
+.footer-elem {
+  color: black;
+}
