@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import colors from "../scss/index.scss";
 import MarkerClusterGroup from "react-leaflet-markercluster";
-import { MapContainer, LayersControl, TileLayer, Marker } from "react-leaflet";
+import { MapContainer, LayersControl, TileLayer, WMSTileLayer } from "react-leaflet";
 import L from "leaflet";
 import { useSelector } from "react-redux";
 import OwnMarker from "./Marker.jsx";
@@ -40,7 +40,7 @@ const Leaflet = () => {
         zoom={6}
         zoomControl={false}
         className={isTabletOrMobile ? "pointMap mobile" : "pointMap"}>
-        <LayersControl position='topright'>
+        {/* <LayersControl position='topright'>
           <LayersControl.BaseLayer name='OpenStreetMap'>
             <TileLayer
               attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -60,13 +60,14 @@ const Leaflet = () => {
               url='https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png'
             />
           </LayersControl.BaseLayer>
-        </LayersControl>
-        {locationActivate ? <LocationMarker /> : ""}
-        <MarkerClusterGroup polygonOptions={geoJSONstyle()}>
-          {isTabletOrMobile
-            ? points.features.map((p) => OwnMarkerWithoutPic(p))
-            : points.features.map((p) => OwnMarker(p))}
-        </MarkerClusterGroup>
+        </LayersControl> */}
+        <WMSTileLayer
+              url="http://gw-geoportal-test.igac.gov.co/cartografia500k/wms?service=WMS"
+              version='1.1.0'
+              layers="linea_costera"
+              srs="EPSG:4326"
+              format="image/png"
+        ></WMSTileLayer>
       </MapContainer>
       <div id='positioningDiv' className='location-div'>
         <button
