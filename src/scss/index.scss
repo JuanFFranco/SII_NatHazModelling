@@ -245,10 +245,10 @@ $theme-colors: (
 .sidenav {
   margin-top: 74px !important;
   height: 70vh;
-  border-radius: 8px;
+  //border-radius: 8px;
 }
 .sidenav---sidenav---_2tBP {
-  background: $primare_opac;
+  background: #343a40 ;
 }
 
 .sidenav---collapsed---LQDEv {
@@ -283,8 +283,8 @@ $theme-colors: (
   margin-top: 64px;
 }
 .leaflet-control-layers {
-  background-color: $primary;
-  color: rgb(196, 212, 197);
+  background-color: #343a40 !important;
+  color: #fff;
 }
 .location-div button {
   position: absolute;

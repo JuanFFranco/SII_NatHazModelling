@@ -15,7 +15,7 @@ const legendItems = [
     ),
     new LegendItem(
         "1.478.966- 2.591.187",
-        "#06aa6e",
+        "#0343a40",
         (quantity) => quantity >= 1478966 && quantity< 2591187,
     ),
     new LegendItem(

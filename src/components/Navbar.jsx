@@ -41,12 +41,12 @@ function navigation() {
             : "darkNav"
         }
         bg={scrollTop ? "" : "dark"}
-        variant={scrollTop ? "" : "dark"}
-        style={scrollTop ? { backgroundColor: "rgba(255, 255, 255, 0)" } : {}}
+        variant={scrollTop ? "" : "withe"}
+        style={scrollTop ? { backgroundColor: "#ffffff" } : {}}
         expand='xl'>
         <Navbar.Brand href='/FoodWaste'>
           <img
-            src={logo}
+            src='https://kap.uni-muenster.de/sites/all/themes/kapwwu/logo_footer.png'
             alt='Logo'
             className={
               scrollTop
@@ -60,8 +60,7 @@ function navigation() {
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
         <Navbar.Collapse id='navigation-collapse'>
           <Nav className='mr-auto'>
-            <Nav.Link href='/FoodWaste'>Home</Nav.Link>
-            <Nav.Link href='/FoodWaste/#map'>Map</Nav.Link>
+            <Nav.Link >Spatial Infomation Infrastructure - Final Project</Nav.Link>
           </Nav>
           {upperRightItems}
         </Navbar.Collapse>

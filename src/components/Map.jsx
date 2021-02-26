@@ -36,8 +36,8 @@ const Leaflet = () => {
   return (
     <>
       <MapContainer
-        center={[51.960667, 7.626135]}
-        zoom={13}
+        center={[4, -74.2]}
+        zoom={6}
         zoomControl={false}
         className={isTabletOrMobile ? "pointMap mobile" : "pointMap"}>
         <LayersControl position='topright'>
@@ -49,6 +49,12 @@ const Leaflet = () => {
           </LayersControl.BaseLayer>
 
           <LayersControl.BaseLayer checked name='OSM Reduced Colors'>
+            <TileLayer
+              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+              url='https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png'
+            />
+          </LayersControl.BaseLayer>
+          <LayersControl.BaseLayer name='Bing Image'>
             <TileLayer
               attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
               url='https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png'
