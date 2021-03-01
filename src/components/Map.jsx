@@ -40,7 +40,8 @@ const Leaflet = () => {
         zoom={6}
         zoomControl={false}
         className={isTabletOrMobile ? "pointMap mobile" : "pointMap"}>
-        {/* <LayersControl position='topright'>
+        
+        <LayersControl position='topright'>
           <LayersControl.BaseLayer name='OpenStreetMap'>
             <TileLayer
               attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -60,14 +61,73 @@ const Leaflet = () => {
               url='https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png'
             />
           </LayersControl.BaseLayer>
-        </LayersControl> */}
-        <WMSTileLayer
-              url="http://gw-geoportal-test.igac.gov.co/cartografia500k/wms?service=WMS"
-              version='1.1.0'
-              layers="linea_costera"
-              srs="EPSG:4326"
-              format="image/png"
-        ></WMSTileLayer>
+          <LayersControl.Overlay checked name="Rivers">
+            <WMSTileLayer
+                  url="http://localhost:8080/geoserver/SII/wms?service=WMS"
+                  version='1.1.0'
+                  layers="SII:Drenaje_Sencillo"
+                  srs="EPSG:4326"
+                  format="image/png"
+                  opacity= "1"
+                  transparent
+            ></WMSTileLayer>
+            </LayersControl.Overlay>
+            <LayersControl.Overlay checked name="Buildings">
+            <WMSTileLayer
+                  url="http://localhost:8080/geoserver/SII/wms?service=WMS"
+                  version='1.1.0'
+                  layers="SII:Construccion_R"
+                  srs="EPSG:4326"
+                  format="image/png"
+                  opacity= "1"
+                  transparent
+            ></WMSTileLayer>
+            </LayersControl.Overlay>
+            <LayersControl.Overlay checked name="Political Boundaries">
+            <WMSTileLayer
+                  url="http://localhost:8080/geoserver/SII/wms?service=WMS"
+                  version='1.1.0'
+                  layers="SII:Administrativo_R"
+                  srs="EPSG:4326"
+                  format="image/png"
+                  opacity= "1"
+                  transparent
+            ></WMSTileLayer>
+            </LayersControl.Overlay>
+            <LayersControl.Overlay checked name="Flood Hazard">
+            <WMSTileLayer
+                  url="http://localhost:8080/geoserver/SII/wms?service=WMS"
+                  version='1.1.0'
+                  layers="SII:Zonas Inundación NIÑA"
+                  srs="EPSG:4326"
+                  format="image/png"
+                  opacity= "1"
+                  transparent
+            ></WMSTileLayer>
+            </LayersControl.Overlay>
+            <LayersControl.Overlay checked name="Meteorological Stations">
+            <WMSTileLayer
+                  url="http://localhost:8080/geoserver/SII/wms?service=WMS"
+                  version='1.1.0'
+                  layers="SII:CNE_IDEAM"
+                  srs="EPSG:4326"
+                  format="image/png"
+                  opacity= "1"
+                  transparent
+            ></WMSTileLayer>
+            </LayersControl.Overlay>
+            <LayersControl.Overlay checked name="LandCover 2010 - 2012">
+            <WMSTileLayer
+                  url="http://localhost:8080/geoserver/SII/wms?service=WMS"
+                  version='1.1.0'
+                  layers="top:states"
+                  srs="EPSG:4326"
+                  format="image/png"
+                  opacity= "1"
+                  transparent
+            ></WMSTileLayer>
+        </LayersControl.Overlay>
+        </LayersControl>
       </MapContainer>
       <div id='positioningDiv' className='location-div'>
         <button

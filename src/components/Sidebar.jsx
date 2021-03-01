@@ -7,9 +7,9 @@ import { useDispatch, useSelector } from "react-redux";
 import {setPoints, setWholeGroup } from "../actions";
 import Form from 'react-bootstrap/Form'
 
-const recycling = ["glass","individualWaste", "clothes", "EverydayObjects", "books", "organization", "foodsharing"]
+const recycling = ["Rivers", "Buildings", "Political Boundaries"]
 
-const shops = ["food", "repair", "clothes", "clothes, toys", "diverse", "multimedia", "furniture"]
+const shops = ["Flood Hazard", "Meteorological Stations", "Land Cover 2010-2012"]
 
 const Sidebar = () => {
     const categories = useSelector((state) => state.categories);
