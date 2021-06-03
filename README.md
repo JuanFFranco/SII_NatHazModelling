@@ -1,6 +1,6 @@
-# FoodWaste
+# Natural Hazard SII 
 
-This repository is the work of Group 2 for GI in Society at the WWU Münster (WiSe 20/21)
+This repository is the work of SII at the WWU Münster (WiSe 20/21)
 
 ### Prerequisites
 
